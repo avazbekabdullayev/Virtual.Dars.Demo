@@ -54,10 +54,9 @@
                 "*" => firstNumber * secondNumber,
                 "/" => firstNumber / secondNumber,
                 "^" => Math.Pow(firstNumber, secondNumber),
+                "#" => Math.Sqrt(firstNumber)
             };
             Console.WriteLine($"Natija: {firstNumber} {operation} {secondNumber} = {result}");
-            firstNumber = firstNumber + 1;
-            firstNumber += 1;
             Console.WriteLine($"firstNumber={firstNumber}");
             return result;
         }
@@ -80,9 +79,9 @@
         {
             string operation = string.Empty;
 
-            while (operation != "+" && operation != "-" && operation != "*" && operation != "/" && operation != "^")
+            while (operation != "+" && operation != "-" && operation != "*" && operation != "/"  && operation !="#"  && operation != "^")
             {
-                Console.WriteLine("Amalni kiriting: (+ - / * ^):");
+                Console.WriteLine("Amalni kiriting: (+ - / * ^ #):");
                 operation = Console.ReadLine();
             }
 
